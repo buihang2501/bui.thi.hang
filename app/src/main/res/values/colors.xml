@@ -6,6 +6,6 @@
 
     <color name="colorButtonNumber">#fdfdfd</color>
     <color name="backgroundButtonNumber">#333333</color>
-    <color name="backgroundButtonDau">#ff9501</color>
-    <color name="colorButtonDau">#fafcee</color>
+    <color name="backgroundButtonOperator">#ff9501</color>
+    <color name="colorButtonOperator">#fafcee</color>
 </resources>

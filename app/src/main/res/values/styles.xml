@@ -22,9 +22,9 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">75dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:background">@color/backgroundButtonDau</item>
+        <item name="android:background">@color/backgroundButtonOperator</item>
         <item name="layout_constraintWidth_percent">0.24</item>
-        <item name="android:textColor">@color/colorButtonDau</item>
+        <item name="android:textColor">@color/colorButtonOperator</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
     </style>
