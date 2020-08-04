@@ -9,11 +9,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tv0, tv1, tv2, tv3, tv4, tv5, tv6, tv7, tv8, tv9, tv00, tv_cong, tv_tru, tv_nhan, tv_chia, tv_bang;
-    TextView tv_result;
+    private TextView[] textNumber= new TextView[10];
+    private TextView textResult, textAdd, textSub, textMul, textDiv, text00, textEqual;
     int value1 = -1, value2 = -1;
-    boolean cong, tru, nhan ,chia;
-    String txtresult = "";
+    boolean add, sub, mul, div;
+    String txtResult = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,187 +22,118 @@ public class MainActivity extends AppCompatActivity {
 
         findId();
 
-        cong = false; tru = false; nhan = false; chia = false;
+        add = false; sub = false; mul = false; div = false;
 
-        tv0.setOnClickListener(new View.OnClickListener() {
+        for(int i = 0; i < 10; i ++){
+            final int finalI = i;
+            textNumber[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    txtResult += String.valueOf(finalI);
+                    textResult.setText(txtResult);
+                }
+            });
+        }
+
+        text00.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtresult += "0";
-                tv_result.setText(txtresult);
+                txtResult += "00";
+                textResult.setText(txtResult);
             }
         });
 
-        tv1.setOnClickListener(new View.OnClickListener() {
+        textAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtresult += "1";
-                tv_result.setText(txtresult);
-            }
-        });
-
-        tv2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                txtresult += "2";
-                tv_result.setText(txtresult);
-            }
-        });
-
-        tv3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                txtresult += "3";
-                tv_result.setText(txtresult);
-            }
-        });
-
-        tv4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                txtresult += "4";
-                tv_result.setText(txtresult);
-            }
-        });
-
-        tv5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                txtresult += "5";
-                tv_result.setText(txtresult);
-            }
-        });
-
-        tv6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                txtresult += "6";
-                tv_result.setText(txtresult);
-            }
-        });
-
-        tv7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                txtresult += "7";
-                tv_result.setText(txtresult);
-            }
-        });
-
-        tv8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                txtresult += "8";
-                tv_result.setText(txtresult);
-            }
-        });
-
-        tv9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                txtresult += "9";
-                tv_result.setText(txtresult);
-            }
-        });
-
-        tv00.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                txtresult += "00";
-                tv_result.setText(txtresult);
-            }
-        });
-
-        tv_cong.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(tru || nhan|| chia){
-                    tru = false; nhan = false; chia = false;
+                if(sub || div|| mul){
+                    sub = false; mul = false; div = false;
                 }
 
-                if(!txtresult.equals("")){
-                    value1 = Integer.valueOf(txtresult);
-                    cong = true;
-                    txtresult = "";
+                if(!txtResult.equals("")){
+                    value1 = Integer.valueOf(txtResult);
+                    add = true;
+                    txtResult = "";
                 }
             }
         });
 
-        tv_tru.setOnClickListener(new View.OnClickListener() {
+        textSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(cong || nhan|| chia){
-                    cong = false; nhan = false; chia = false;
+                if(add || mul|| div){
+                    add = false; mul = false; div = false;
                 }
 
-                if(!txtresult.equals("")){
-                    value1 = Integer.valueOf(txtresult);
-                    tru = true;
-                    txtresult = "";
+                if(!txtResult.equals("")){
+                    value1 = Integer.valueOf(txtResult);
+                    sub = true;
+                    txtResult = "";
                 }
             }
         });
 
-        tv_nhan.setOnClickListener(new View.OnClickListener() {
+        textMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(tru || cong|| chia){
-                    tru = false; cong = false; chia = false;
+                if(add || sub|| div){
+                    add = false; sub = false; div = false;
                 }
 
-                if(!txtresult.equals("")){
-                    value1 = Integer.valueOf(txtresult);
-                    nhan = true;
-                    txtresult = "";
+                if(!txtResult.equals("")){
+                    value1 = Integer.valueOf(txtResult);
+                    mul = true;
+                    txtResult = "";
                 }
             }
         });
 
-        tv_chia.setOnClickListener(new View.OnClickListener() {
+        textDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(tru || nhan|| cong){
-                    tru = false; nhan = false; cong = false;
+                if(sub || mul|| add){
+                    sub = false; mul = false; add = false;
                 }
 
-                if(!txtresult.equals("")){
-                    value1 = Integer.valueOf(txtresult);
-                    chia = true;
-                    txtresult = "";
+                if(!txtResult.equals("")){
+                    value1 = Integer.valueOf(txtResult);
+                    div = true;
+                    txtResult = "";
                 }
             }
         });
 
-        tv_bang.setOnClickListener(new View.OnClickListener() {
+        textEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                value2 = Integer.valueOf(txtresult);
+                value2 = Integer.valueOf(txtResult);
 
-                if(cong == true){
-                    tv_result.setText(String.valueOf(value1+value2));
-                    txtresult = "";
-                    cong = false;
+                if(add == true){
+                    textResult.setText(String.valueOf(value1+value2));
+                    txtResult = "";
+                    add = false;
                 }
 
-                if(tru == true){
-                    tv_result.setText(String.valueOf(value1-value2));
-                    txtresult = "";
-                    tru = false;
+                if(sub == true){
+                    textResult.setText(String.valueOf(value1-value2));
+                    txtResult = "";
+                    sub = false;
                 }
 
-                if(nhan == true){
-                    tv_result.setText(String.valueOf(value1*value2));
-                    txtresult = "";
-                    nhan = false;
+                if(mul == true){
+                    textResult.setText(String.valueOf(value1*value2));
+                    txtResult = "";
+                    mul = false;
                 }
 
-                if(chia == true){
+                if(div == true){
                     if(value2 == 0){
-                        txtresult = "";
+                        txtResult = "";
                         Toast.makeText(MainActivity.this,"Số chia phải khác 0!!!",Toast.LENGTH_SHORT).show();
                     }else{
-                        tv_result.setText(String.valueOf(value1/value2));
-                        txtresult = "";
-                        chia = false;
+                        textResult.setText(String.valueOf(value1/value2));
+                        txtResult = "";
+                        div = false;
                     }
                 }
             }
@@ -210,22 +141,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void findId(){
-        tv0 = findViewById(R.id.tv0);
-        tv1 = findViewById(R.id.tv1);
-        tv2 = findViewById(R.id.tv2);
-        tv3 = findViewById(R.id.tv3);
-        tv4 = findViewById(R.id.tv4);
-        tv5 = findViewById(R.id.tv5);
-        tv6 = findViewById(R.id.tv6);
-        tv7 = findViewById(R.id.tv7);
-        tv8 = findViewById(R.id.tv8);
-        tv9 = findViewById(R.id.tv9);
-        tv00 = findViewById(R.id.tv00);
-        tv_cong = findViewById(R.id.tv_cong);
-        tv_tru = findViewById(R.id.tv_tru);
-        tv_nhan = findViewById(R.id.tv_nhan);
-        tv_chia = findViewById(R.id.tv_chia);
-        tv_bang = findViewById(R.id.tv_bang);
-        tv_result = findViewById(R.id.tv_ketqua);
+        textNumber[0] = findViewById(R.id.text0);
+        textNumber[1] = findViewById(R.id.text1);
+        textNumber[2] = findViewById(R.id.text2);
+        textNumber[3] = findViewById(R.id.text3);
+        textNumber[4] = findViewById(R.id.text4);
+        textNumber[5] = findViewById(R.id.text5);
+        textNumber[6] = findViewById(R.id.text6);
+        textNumber[7] = findViewById(R.id.text7);
+        textNumber[8] = findViewById(R.id.text8);
+        textNumber[9] = findViewById(R.id.text9);
+        text00 = findViewById(R.id.text00);
+        textAdd = findViewById(R.id.textAdd);
+        textSub = findViewById(R.id.textSub);
+        textMul = findViewById(R.id.textMul);
+        textDiv = findViewById(R.id.textDiv);
+        textEqual = findViewById(R.id.textEqual);
+        textResult = findViewById(R.id.textResult);
+
     }
 }
