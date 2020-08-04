@@ -29,152 +29,152 @@
         app:layout_constraintGuide_percent="0.75" />
 
     <TextView
-        android:id="@+id/tv00"
+        android:id="@+id/text00"
         style="@style/ButtonSet"
-        android:text="00"
-        app:layout_constraintBottom_toBottomOf="@+id/tv0"
+        android:text="@string/tittle_00"
+        app:layout_constraintBottom_toBottomOf="@+id/text0"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv0"
+        app:layout_constraintTop_toTopOf="@+id/text0"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/tv1"
+        android:id="@+id/text1"
         style="@style/ButtonSet"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="@dimen/sizeMarginButton"
         android:text="1"
-        app:layout_constraintBottom_toTopOf="@+id/tv00"
-        app:layout_constraintEnd_toEndOf="@+id/tv00"
-        app:layout_constraintStart_toStartOf="@+id/tv00" />
+        app:layout_constraintBottom_toTopOf="@+id/text00"
+        app:layout_constraintEnd_toEndOf="@+id/text00"
+        app:layout_constraintStart_toStartOf="@+id/text00" />
 
     <TextView
-        android:id="@+id/tv4"
+        android:id="@+id/text4"
         style="@style/ButtonSet"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="@dimen/sizeMarginButton"
         android:text="4"
-        app:layout_constraintBottom_toTopOf="@+id/tv1"
-        app:layout_constraintEnd_toEndOf="@+id/tv1"
-        app:layout_constraintStart_toStartOf="@+id/tv1" />
+        app:layout_constraintBottom_toTopOf="@+id/text1"
+        app:layout_constraintEnd_toEndOf="@+id/text1"
+        app:layout_constraintStart_toStartOf="@+id/text1" />
 
     <TextView
-        android:id="@+id/tv7"
+        android:id="@+id/text7"
         style="@style/ButtonSet"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="@dimen/sizeMarginButton"
         android:text="7"
-        app:layout_constraintBottom_toTopOf="@+id/tv4"
-        app:layout_constraintEnd_toEndOf="@+id/tv4"
-        app:layout_constraintStart_toStartOf="@+id/tv4" />
+        app:layout_constraintBottom_toTopOf="@+id/text4"
+        app:layout_constraintEnd_toEndOf="@+id/text4"
+        app:layout_constraintStart_toStartOf="@+id/text4" />
 
     <TextView
-        android:id="@+id/tv0"
+        android:id="@+id/text0"
         style="@style/ButtonSet"
         android:text="0"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_bang"
+        app:layout_constraintBottom_toBottomOf="@+id/textEqual"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/tv_bang" />
+        app:layout_constraintTop_toTopOf="@+id/textEqual" />
 
     <TextView
-        android:id="@+id/tv2"
+        android:id="@+id/text2"
         style="@style/ButtonSet"
         android:text="2"
-        app:layout_constraintBottom_toBottomOf="@+id/tv1"
-        app:layout_constraintEnd_toEndOf="@+id/tv0"
-        app:layout_constraintStart_toStartOf="@+id/tv0"
-        app:layout_constraintTop_toTopOf="@+id/tv1" />
+        app:layout_constraintBottom_toBottomOf="@+id/text1"
+        app:layout_constraintEnd_toEndOf="@+id/text0"
+        app:layout_constraintStart_toStartOf="@+id/text0"
+        app:layout_constraintTop_toTopOf="@+id/text1" />
 
     <TextView
-        android:id="@+id/tv5"
+        android:id="@+id/text5"
         style="@style/ButtonSet"
         android:text="5"
-        app:layout_constraintBottom_toBottomOf="@+id/tv4"
-        app:layout_constraintEnd_toEndOf="@+id/tv2"
-        app:layout_constraintStart_toStartOf="@+id/tv2"
-        app:layout_constraintTop_toTopOf="@+id/tv4" />
+        app:layout_constraintBottom_toBottomOf="@+id/text4"
+        app:layout_constraintEnd_toEndOf="@+id/text2"
+        app:layout_constraintStart_toStartOf="@+id/text2"
+        app:layout_constraintTop_toTopOf="@+id/text4" />
 
     <TextView
-        android:id="@+id/tv8"
+        android:id="@+id/text8"
         style="@style/ButtonSet"
         android:text="8"
-        app:layout_constraintBottom_toBottomOf="@+id/tv7"
-        app:layout_constraintEnd_toEndOf="@+id/tv5"
-        app:layout_constraintStart_toStartOf="@+id/tv5"
-        app:layout_constraintTop_toTopOf="@+id/tv7" />
+        app:layout_constraintBottom_toBottomOf="@+id/text7"
+        app:layout_constraintEnd_toEndOf="@+id/text5"
+        app:layout_constraintStart_toStartOf="@+id/text5"
+        app:layout_constraintTop_toTopOf="@+id/text7" />
 
     <TextView
-        android:id="@+id/tv_bang"
+        android:id="@+id/textEqual"
         style="@style/ButtonDau"
         android:text="="
-        app:layout_constraintBottom_toBottomOf="@+id/tv_cong"
+        app:layout_constraintBottom_toBottomOf="@+id/textAdd"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/tv_cong" />
+        app:layout_constraintTop_toTopOf="@+id/textAdd" />
 
     <TextView
-        android:id="@+id/tv3"
+        android:id="@+id/text3"
         style="@style/ButtonSet"
         android:text="3"
-        app:layout_constraintBottom_toBottomOf="@+id/tv2"
-        app:layout_constraintEnd_toEndOf="@+id/tv_bang"
-        app:layout_constraintStart_toStartOf="@+id/tv_bang"
-        app:layout_constraintTop_toTopOf="@+id/tv2" />
+        app:layout_constraintBottom_toBottomOf="@+id/text2"
+        app:layout_constraintEnd_toEndOf="@+id/textEqual"
+        app:layout_constraintStart_toStartOf="@+id/textEqual"
+        app:layout_constraintTop_toTopOf="@+id/text2" />
 
     <TextView
-        android:id="@+id/tv6"
+        android:id="@+id/text6"
         style="@style/ButtonSet"
         android:text="6"
-        app:layout_constraintBottom_toBottomOf="@+id/tv5"
-        app:layout_constraintEnd_toEndOf="@+id/tv3"
-        app:layout_constraintStart_toStartOf="@+id/tv3"
-        app:layout_constraintTop_toTopOf="@+id/tv5" />
+        app:layout_constraintBottom_toBottomOf="@+id/text5"
+        app:layout_constraintEnd_toEndOf="@+id/text3"
+        app:layout_constraintStart_toStartOf="@+id/text3"
+        app:layout_constraintTop_toTopOf="@+id/text5" />
 
     <TextView
-        android:id="@+id/tv9"
+        android:id="@+id/text9"
         style="@style/ButtonSet"
         android:text="9"
-        app:layout_constraintBottom_toBottomOf="@+id/tv8"
-        app:layout_constraintEnd_toEndOf="@+id/tv6"
-        app:layout_constraintStart_toStartOf="@+id/tv6"
-        app:layout_constraintTop_toTopOf="@+id/tv8" />
+        app:layout_constraintBottom_toBottomOf="@+id/text8"
+        app:layout_constraintEnd_toEndOf="@+id/text6"
+        app:layout_constraintStart_toStartOf="@+id/text6"
+        app:layout_constraintTop_toTopOf="@+id/text8" />
 
     <TextView
-        android:id="@+id/tv_cong"
+        android:id="@+id/textAdd"
         style="@style/ButtonDau"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="@dimen/sizeMarginButton"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline3" />
 
     <TextView
-        android:id="@+id/tv_tru"
+        android:id="@+id/textSub"
         style="@style/ButtonDau"
         android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/tv3"
-        app:layout_constraintEnd_toEndOf="@+id/tv_cong"
-        app:layout_constraintStart_toStartOf="@+id/tv_cong"
-        app:layout_constraintTop_toTopOf="@+id/tv3" />
+        app:layout_constraintBottom_toBottomOf="@+id/text3"
+        app:layout_constraintEnd_toEndOf="@+id/textAdd"
+        app:layout_constraintStart_toStartOf="@+id/textAdd"
+        app:layout_constraintTop_toTopOf="@+id/text3" />
 
     <TextView
-        android:id="@+id/tv_nhan"
+        android:id="@+id/textMul"
         style="@style/ButtonDau"
         android:text="x"
-        app:layout_constraintBottom_toBottomOf="@+id/tv6"
-        app:layout_constraintEnd_toEndOf="@+id/tv_tru"
-        app:layout_constraintStart_toStartOf="@+id/tv_tru"
-        app:layout_constraintTop_toTopOf="@+id/tv6" />
+        app:layout_constraintBottom_toBottomOf="@+id/text6"
+        app:layout_constraintEnd_toEndOf="@+id/textSub"
+        app:layout_constraintStart_toStartOf="@+id/textSub"
+        app:layout_constraintTop_toTopOf="@+id/text6" />
 
     <TextView
-        android:id="@+id/tv_chia"
+        android:id="@+id/textDiv"
         style="@style/ButtonDau"
         android:text="/"
-        app:layout_constraintBottom_toBottomOf="@+id/tv9"
-        app:layout_constraintEnd_toEndOf="@+id/tv_nhan"
-        app:layout_constraintStart_toStartOf="@+id/tv_nhan"
-        app:layout_constraintTop_toTopOf="@+id/tv9" />
+        app:layout_constraintBottom_toBottomOf="@+id/text9"
+        app:layout_constraintEnd_toEndOf="@+id/textMul"
+        app:layout_constraintStart_toStartOf="@+id/textMul"
+        app:layout_constraintTop_toTopOf="@+id/text9" />
 
     <TextView
-        android:id="@+id/tv_ketqua"
+        android:id="@+id/textResult"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="bottom|end"
@@ -182,7 +182,7 @@
         android:text="0"
         android:textColor="#fefefe"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv8"
+        app:layout_constraintBottom_toTopOf="@+id/text8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
